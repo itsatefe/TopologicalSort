@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.GraphController">
+   <top>
+      <Pane prefHeight="57.0" prefWidth="744.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="57.0" stroke="TRANSPARENT" strokeType="INSIDE" width="744.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.6893203883495146">
+                     <stops>
+                        <Stop color="#5db1ff" />
+                        <Stop color="#5db1ff" offset="0.007246376811594203" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label layoutX="87.0" layoutY="-11.0" prefHeight="79.0" prefWidth="269.0" text="Click on pane to insert a node" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <Pane prefHeight="477.0" prefWidth="71.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="386.0" stroke="TRANSPARENT" strokeType="INSIDE" width="71.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.05339805825242714" startY="0.5922330097087378">
+                     <stops>
+                        <Stop color="#5db1ff" />
+                        <Stop color="#5db1ff" offset="0.007246376811594203" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+         </children>
+      </Pane>
+   </left>
+   <right>
+      <Pane prefHeight="449.0" prefWidth="71.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="506.0" layoutY="-57.0" stroke="TRANSPARENT" strokeType="INSIDE" width="71.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.05339805825242714" startY="0.5922330097087378">
+                     <stops>
+                        <Stop color="#5db1ff" />
+                        <Stop color="#5db1ff" offset="0.007246376811594203" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+         </children>
+      </Pane>
+   </right>
+   <bottom>
+      <Pane prefHeight="64.0" prefWidth="744.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="67.0" stroke="TRANSPARENT" strokeType="INSIDE" width="744.0">
+               <fill>
+                  <LinearGradient endX="1.0" startY="1.0">
+                     <stops>
+                        <Stop color="#5db1ff" />
+                        <Stop color="#5db1ff" offset="0.007246376811594203" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+         </children>
+      </Pane>
+   </bottom>
+   <center>
+      <AnchorPane fx:id="pane" onMouseClicked="#MouseClickedMakeNode" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="387.0" stroke="TRANSPARENT" strokeType="INSIDE" width="604.0" />
+            <Button fx:id="sumbitNodes" graphicTextGap="5.0" layoutX="502.0" layoutY="333.0" mnemonicParsing="false" onAction="#toSumbitNodes" text="Sumbit" textAlignment="CENTER" textFill="#2c1414">
+               <effect>
+                  <Reflection />
+               </effect>
+            </Button>
+            <Button fx:id="SortNodes" graphicTextGap="5.0" layoutX="440.0" layoutY="333.0" mnemonicParsing="false" onAction="#toTopologicallySort" text="Sort" textAlignment="CENTER" textFill="#2c1414">
+               <effect>
+                  <Reflection />
+               </effect>
+            </Button>
+            <Button fx:id="confNumBtn" layoutX="26.0" layoutY="333.0" mnemonicParsing="false" onAction="#confNumNode" text="confirm">
+               <effect>
+                  <Reflection />
+               </effect>
+            </Button>
+            <TextField fx:id="numNode" layoutX="108.0" layoutY="333.0" />
+            <Label fx:id="cycleLb" layoutX="26.0" layoutY="261.0" prefHeight="52.0" prefWidth="531.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

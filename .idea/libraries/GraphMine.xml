@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="GraphMine">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/GraphMine.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
